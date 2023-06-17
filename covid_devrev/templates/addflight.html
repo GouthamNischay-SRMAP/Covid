@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add covid</title>
+    <link rel="stylesheet" type="text/css" href="/static/adminstyle.css">
+</head>
+<body>
+    <form class="home-button" action="/admindash">
+        <input type="submit" value="Dashboard"/>
+    </form>
+    <div class="container">
+        <h1>Add covid</h1>
+        <form action="/addcovid" method="POST">
+            <label for="covid_number" class="addcon">covid Number:</label>
+            <input type="text" id="covidno" name="covidno" required><br><br>
+            
+            <label for="date" class="addcon">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+            
+            <label for="time" class="addcon">Time:</label>
+            <input type="time" id="time" name="time" required><br><br>
+
+            <label for="destination" class="addcon">Destination:</label>
+            <input type="text" id="destination" name="destination" required><br><br>
+            
+            <input type="submit" value="Add covid">
+        </form>
+    </div>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="messages">{{messages[0]}}</div>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>

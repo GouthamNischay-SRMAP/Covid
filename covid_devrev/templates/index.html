@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 16px;
+            background-color: #fff;
+            border: 3px solid #f1f1f1;
+            text-align: center;
+        }
+
+        .container h1 {
+            margin-bottom: 24px;
+        }
+
+        .button-container {
+            margin-top: 16px;
+        }
+
+        .button-container h3 {
+            margin-bottom: 12px;
+        }
+
+        .button-container form {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .button-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 3px;
+        }
+
+        .button-container .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book your covid</h1>
+        <div class="button-container">
+            <h3>Login as:</h3>
+            <form action="/userlogin">
+                <button class="btn" type="submit">User</button>
+            </form>
+            <form action="/adminlogin">
+                <button class="btn" type="submit">Admin</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

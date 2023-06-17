@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/static/adminstyle.css">
+</head>
+<body>
+    <form class="home-button" action="/">
+        <input type="submit" value="Home"/>
+    </form>
+    <div class="container">
+        <h1>Welcome, Admin!</h1>
+        <nav>
+            <ul>
+                <li><a href="/addcovid">Add covids</a></li>
+                <li><a href="/removecovid">Remove covids</a></li>
+                <li><a href="/view">View Bookings</a></li>
+            </ul>
+        </nav>
+    </div>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="messages">{{messages[0]}}</div>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
